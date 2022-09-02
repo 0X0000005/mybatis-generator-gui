@@ -34,11 +34,7 @@ mybatis-generator-gui是基于 [mybatis generator](http://www.mybatis.org/genera
 
 ### 启动本软件
 
-* 方法一：关注微信公众号“搬砖头也要有态度”，回复“GUI”获取下载链接
-    
-  ![image](https://user-images.githubusercontent.com/3505708/61360019-2893dc00-a8b0-11e9-8dc9-a020e997ab87.png)
-
-* 方法二: 自助构建
+* 方法一: 自助构建
 
   ```bash
   git clone https://github.com/zouzg/mybatis-generator-gui
@@ -48,7 +44,7 @@ mybatis-generator-gui是基于 [mybatis generator](http://www.mybatis.org/genera
   java -jar mybatis-generator-gui.jar
   ```
 
-* 方法三: IDE中运行
+* 方法二: IDE中运行
 
   Eclipse or IntelliJ IDEA中启动, 找到`com.zzg.mybatis.generator.MainUI`类并运行就可以了（主要你的IED运行的jdk版本是否符合要求）
 
@@ -83,8 +79,6 @@ mybatis-generator-gui是基于 [mybatis generator](http://www.mybatis.org/genera
     * 如果有任何的错误截图会更好
     * 如果你是一些常见的数据库连接、软件启动不了等问题，请先仔细阅读上面的文档，再解决不了在下面的QQ群中问（问问题的时候尽量把各种信息都提供好，否则只是几行文字是没有人愿意为你解答的）。
     
-### QQ群
-鉴于有的同学可能有一些特殊情况不能使用，我建了一个钉钉群供大家交流，钉钉群号：35412531 （原QQ群已不再提供，QQ不方便打开）
 
 - - -
 Licensed under the Apache 2.0 License
