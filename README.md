@@ -1,6 +1,14 @@
 mybatis-generator-gui
 ==============
 
+### 新增功能
+
+原版本想要设置实体类驼峰，必须手工输入每个PropertyName
+
+太麻烦了，新加入逻辑，如果有带下划线的字段，自动转义为驼峰命名
+
+
+
 mybatis-generator-gui是基于 [mybatis generator](http://www.mybatis.org/generator/index.html) 开发一款界面工具, 本工具可以使你非常容易及快速生成Mybatis的Java POJO文件及数据库Mapping文件。
 
 ![image](https://user-images.githubusercontent.com/3505708/49334784-1a42c980-f619-11e8-914d-9ea85db9cec3.png)
