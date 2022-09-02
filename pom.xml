@@ -76,8 +76,8 @@
             <version>1.0</version>
         </dependency>
         <!-- Java 11请关闭下面注释 -->
-        <!--
-        <dependency>
+        
+        <!--<dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>11</version>
@@ -86,8 +86,7 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>11</version>
-        </dependency>
-        -->
+        </dependency>-->
     </dependencies>
 
     <build>
@@ -110,7 +109,7 @@
                         <!-- windows打包开启-->
                         <icon>${project.basedir}/package/windows/mybatis-generator-gui.ico</icon>
                         <!-- mac打包开启-->
-                        <icon>${project.basedir}/package/macosx/mybatis-generator-gui.icns</icon>
+                        <!-- <icon>${project.basedir}/package/macosx/mybatis-generator-gui.icns</icon> -->
                     </bundleArguments>
                     <mainClass>com.zzg.mybatis.generator.MainUI</mainClass>
                     <vendor>Owen Zou</vendor>

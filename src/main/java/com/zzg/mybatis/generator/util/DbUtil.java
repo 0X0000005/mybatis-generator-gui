@@ -194,6 +194,23 @@ public class DbUtil {
 				UITableColumnVO columnVO = new UITableColumnVO();
 				String columnName = rs.getString("COLUMN_NAME");
 				columnVO.setColumnName(columnName);
+				{
+					//加一段property处理
+					if(columnName.indexOf("_") > 0) {
+						String[] p = columnName.split("_",-1);
+						if (p.length >1) {
+							String str = p[0];
+							for (int i=1;i<p.length;i++){
+								char[] chars = p[i].toCharArray();
+								if(chars[0] >= 'a' && chars[0] <= 'z'){
+									chars[0] -= 32;
+								}
+								str = str + new String(chars);
+							}
+							columnVO.setPropertyName(str);
+						}
+					}
+				}
 				columnVO.setJdbcType(rs.getString("TYPE_NAME"));
 				columns.add(columnVO);
 			}
