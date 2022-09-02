@@ -5,7 +5,9 @@ mybatis-generator-gui
 
 原版本想要设置实体类驼峰，必须手工输入每个PropertyName
 
-太麻烦了，新加入逻辑，如果有带下划线的字段，自动转义为驼峰命名
+新加入逻辑，默认处理PropertyName
+
+ 如果有带下划线的字段，自动转义为驼峰命名
 
 
 
@@ -56,7 +58,7 @@ mybatis-generator-gui是基于 [mybatis generator](http://www.mybatis.org/genera
 
   Eclipse or IntelliJ IDEA中启动, 找到`com.zzg.mybatis.generator.MainUI`类并运行就可以了（主要你的IED运行的jdk版本是否符合要求）
 
-* 方法四：打包为本地原生应用，双击快捷方式即可启动，方便快捷
+* 方法三：打包为本地原生应用，双击快捷方式即可启动，方便快捷
 
   如果不想打包后的安装包logo为Java的灰色的茶杯，需要在pom文件里将对应操作系统平台的图标注释放开
 
@@ -67,6 +69,12 @@ mybatis-generator-gui是基于 [mybatis generator](http://www.mybatis.org/genera
   ```
 
   另外需要注意，windows系统打包成exe的话需要安装WiXToolset3+的环境；由于打包后会把jre打入安装包，两个平台均100M左右，体积较大请自行打包；打包后的安装包在target/jfx/native目录下
+  
+* 方法四：利用Idea打包
+
+  ![image-20220902173737553](README_img/image-20220902173737553.png)
+
+  
 
 ### 注意事项
 * 本自动生成代码工具只适合生成单表的增删改查，对于需要做数据库联合查询的，请自行写新的XML与Mapper；
