@@ -197,18 +197,7 @@ public class DbUtil {
 				{
 					//加一段property处理
 					if(columnName.indexOf("_") > 0) {
-						String[] p = columnName.split("_",-1);
-						if (p.length >1) {
-							String str = p[0];
-							for (int i=1;i<p.length;i++){
-								char[] chars = p[i].toCharArray();
-								if(chars[0] >= 'a' && chars[0] <= 'z'){
-									chars[0] -= 32;
-								}
-								str = str + new String(chars);
-							}
-							columnVO.setPropertyName(str);
-						}
+						columnVO.setPropertyName(getPropertyName(columnName));
 					}
 				}
 				columnVO.setJdbcType(rs.getString("TYPE_NAME"));
@@ -218,6 +207,27 @@ public class DbUtil {
 		} finally {
 			conn.close();
 			shutdownPortForwarding(sshSession);
+		}
+	}
+
+	private static String getPropertyName(String columnName){
+		String[] p = columnName.split("_",-1);
+		if (p.length >1) {
+			StringBuilder str = new StringBuilder(p[0].toLowerCase());
+			for (int i=1;i<p.length;i++){
+				String s = p[i].toLowerCase();
+				char[] chars = s.toCharArray();
+				if (chars.length == 0) {
+					continue;
+				}
+				if(chars[0] >= 'a' && chars[0] <= 'z'){
+					chars[0] -= 32;
+				}
+				str.append(new String(chars));
+			}
+			return str.toString();
+		} else {
+			return columnName;
 		}
 	}
 
